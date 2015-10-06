@@ -26,6 +26,7 @@ function! RunNearestTest()
     let s:last_test_file = s:CurrentFilePath()
     let s:last_test_file_with_line = s:last_test_file . ":" . line(".")
     let s:last_test = s:last_test_file_with_line
+    echom s:last_test_file_with_line
     call s:RunTests(s:last_test_file_with_line)
   elseif exists("s:last_test_file_with_line")
     call s:RunTests(s:last_test_file_with_line)
